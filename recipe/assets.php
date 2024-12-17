@@ -5,6 +5,7 @@ namespace Deployer;
 desc('Build assets locally');
 task('assets:build', function () {
     runLocally('bin/console importmap:install');
+    runLocally('bin/console sass:build');
     runLocally('bin/console tailwind:build --minify');
     runLocally('bin/console asset-map:compile');
 });
