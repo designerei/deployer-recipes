@@ -16,8 +16,8 @@ add('exclude', [
     '.DS_Store',
     '/.env.example',
     '/.symfony.local.yaml',
-    '/asset-mapper',
-    '/var/backups'
+    '/themes/*/assets',
+    '/var/backups',
 ]);
 
 after('deploy:vendors', 'deploy:htaccess');
