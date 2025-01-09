@@ -3,7 +3,6 @@
 namespace Deployer;
 
 import('recipe/contao.php');
-import(__DIR__ . '/assets.php');
 import(__DIR__ . '/backup.php');
 import(__DIR__ . '/contao.php');
 import(__DIR__ . '/contao-rsync.php');
