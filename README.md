@@ -30,7 +30,24 @@ host('DEV')
     ->set('deploy_path', '/home/foobar/httpdocs')
     ->set('bin/php', 'path/to/php')
     ->set('bin/composer', '{{bin/php}} /path/to/bin/composer/composer.phar')
+    ->set('cachetool_args', '--web=SymfonyHttpClient --web-path=./{{public_path}} --web-url=https://{{hostname}}')
 ;
+
+after('deploy:success', 'cachetool:clear:opcache');
+
+// Here you can define project specific excludes and tasks
+
+// Project-specific exclude
+//add('exclude', [
+//  ''
+//]);
+
+// Project-specific tasks
+//task('task', function () {
+//    runLocally('');
+//});
+
+after('contao:manager:download', 'contao:manager:lock');
 ```
 
 ### Deploy
