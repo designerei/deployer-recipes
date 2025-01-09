@@ -13,10 +13,10 @@ set('keep_releases', 3);
 
 add('exclude', [
     '.DS_Store',
-    '/.env.example',
-    '/.symfony.local.yaml',
-    '/themes/*/assets',
     '/var/backups',
+    '/.env.example',
+    '/.php-version',
+    '/.symfony.local.yaml',
 ]);
 
 after('deploy:vendors', 'deploy:htaccess');
