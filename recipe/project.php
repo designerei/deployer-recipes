@@ -2,6 +2,8 @@
 
 namespace Deployer;
 
+use function Sodium\add;
+
 import('recipe/contao.php');
 import(__DIR__ . '/backup.php');
 import(__DIR__ . '/contao.php');
@@ -13,10 +15,15 @@ set('keep_releases', 3);
 
 add('exclude', [
     '.DS_Store',
-    '/var/backups',
     '/.env.example',
     '/.php-version',
     '/.symfony.local.yaml',
+    '/README.md',
+    '/var/backups',
+    '/package.json',
+    '/package-lock.json',
+    '/yarn.lock',
+    '/node_modules',
 ]);
 
 after('deploy:vendors', 'deploy:htaccess');
