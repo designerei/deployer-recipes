@@ -2,8 +2,6 @@
 
 namespace Deployer;
 
-use function Sodium\add;
-
 import('recipe/contao.php');
 import(__DIR__ . '/backup.php');
 import(__DIR__ . '/contao.php');
