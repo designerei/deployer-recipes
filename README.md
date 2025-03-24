@@ -3,7 +3,7 @@
 This repository contains specific recipes to integrate with [Deployer](https://deployer.org/).
 
 The recipes are customized for use with the `conplate` framework, built by designerei. They are intended to work with 
-Contao version 5.3+, Deployer 7 and [Symfony AssetMapper](https://symfony.com/doc/current/frontend/asset_mapper.html).
+Contao version 5.3+, Deployer 7.
 
 ## Install
 
